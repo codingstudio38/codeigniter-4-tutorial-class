@@ -1,0 +1,9 @@
+https://softwareflame.com/google-login/ci4_app/
+
+db pass
+codeIgniter_4
+a~td5O1u5IsMjgjg
+
+login pass
+@38vidyut
+12345678
