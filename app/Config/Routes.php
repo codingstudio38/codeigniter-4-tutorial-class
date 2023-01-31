@@ -116,7 +116,7 @@ $routes->resource('delete',
         'only'=>['delete']
     ]);
 
-});
+}); 
 //except
 
 
@@ -136,3 +136,4 @@ $routes->resource('delete',
 if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
+?>
