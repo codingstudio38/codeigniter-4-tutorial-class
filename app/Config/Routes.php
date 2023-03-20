@@ -33,21 +33,21 @@ $routes->setAutoRoute(false);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index'); 
 
- 
+  
 $routes->get('userlogin', 'User::login',['filter'=>'Guest']); 
 $routes->get('register', 'User::register',['filter'=>'Guest']);
 $routes->match(['post'],'login', 'User::verify',['filter'=>'Guest']);
 $routes->match(['post'],'/userregister', 'User::create',['filter'=>'Guest']);
 $routes->get('logout', 'User::logout');
 
-
+  
 $routes->group("/",['filter'=>'isLoggedIn'], function($routes){
 $routes->get('profile', 'User::profile');
 $routes->get('delete_profile/(:any)', 'User::profiledelete/$1');
 $routes->post('update_profile', 'User::userUpdate');
 $routes->post('update_password', 'User::changePassword');
 $routes->post('updateThumbnail', 'User::updateThumbnail');
-$routes->get('modelTest/', 'Demo::modeldataview');
+$routes->get('modelTest/', 'Demo::modeldataview'); 
 $routes->match(['post'], '/modelInsert', 'Demo::modeldataInsert');
 $routes->get('daletedata/(:any)', 'Demo::modeldataDelete/$1');  
 $routes->get('editdata/(:any)', 'Demo::modelEditdataView/$1');  
@@ -61,7 +61,7 @@ $routes->post('multipleUpdate/', 'MultiplesController::multipleUpdate');
 $routes->get('getpostids/', 'MultiplesController::getpostids'); 
 $routes->post('multiplefileUpload/', 'MultiplesController::fileUpload'); 
 $routes->post('multiplePhoto/', 'MultiplesController::photoUpload'); 
-$routes->post('xlInsert/', 'XlController::xlfileupload'); 
+$routes->post('xlInsert/', 'XlController::xlfileupload');  
 $routes->post('proxlfileimport/', 'XlController::xlfileprofile'); 
 $routes->get('xlfiledownload/', 'XlController::xlfileexport'); 
 $routes->get('pdfview/', 'PdfController::index'); 

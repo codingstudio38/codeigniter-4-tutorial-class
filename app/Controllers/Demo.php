@@ -7,7 +7,7 @@ use App\Models\ForTest;
 use App\Models\PostModel;
 
 class Demo extends BaseController
-{
+{ 
     private $userModel =null;
     private $profileModel =null;
     private $postModel =null;
@@ -58,7 +58,7 @@ class Demo extends BaseController
 
     }
 //INSER
-    public function modeldataview()
+    public function modeldataview() 
     {
         // $query = $this->postModel->asObject()->findAll();
         // $query = $this->postModel->select('id,title,content,thumbnail')->where('id >','1')->first();
@@ -171,4 +171,4 @@ class Demo extends BaseController
 
 }  
  
-?> 
+?>

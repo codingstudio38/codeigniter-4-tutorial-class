@@ -7,7 +7,7 @@ use App\Models\PostModel;
 use App\Models\ProfileModel;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
-
+ 
 class XlController extends BaseController
 {
     private $profileModel =null;
@@ -17,7 +17,7 @@ class XlController extends BaseController
         $this->profileModel = new ProfileModel();
         $this->postModel = new PostModel();
     }
-
+ 
     public function xlfileupload()
     {
        $vali = $this->validate([
