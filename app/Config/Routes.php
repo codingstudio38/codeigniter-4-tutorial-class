@@ -81,7 +81,7 @@ $routes->match(['post'],'contactInser', 'Contact::contactInser');
 // Redourceful Routes for Restful API
 $routes->group('api',function($routes){
 $routes->resource('getAll',
-    [
+    [ 
         'websafe'=>1,
         'controller'=>'\App\Controllers\APICotroller',
         'only'=>['index']
