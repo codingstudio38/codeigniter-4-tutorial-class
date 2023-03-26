@@ -17,25 +17,27 @@ class Demo extends BaseController
         $this->postModel = new PostModel();
     }
     public function index()
-    {
-        //$query = $this->db->query("SELECT * From users");
+    { 
+        // $query = $this->db->query("SELECT * From users");
         //$result = $query->getRow();
         //$result = $query->getResult();
-        //$result = $query->getRowArray();
-        //$result = $query->getResultArray();
+        // $result = $query->getRowArray();
+        // $result = $query->getResultArray();
         $query = $this->db->table('users')->get();
 
         //$query = $this->db->table('users')->where(['id'=>1])->get();
         //$query = $this->db->table('users')->where(['id'=>1])->orWhere(['name'=>'Bidyut'])->get();
-        $result = $query->getResultArray();
+        // $result = $query->getResultArray();
         // echo $this->db->getLastQuery()."<br/>";
         //echo $this->db->table('users')->countAll()."<br/>";
         //print_r($result);exit;
         // $table = $this->db->table('users');
         // $query=$table->select('id, name, email, phone')->get();
-        // $result = $query->getResultArray();
+        $result = $query->getResultArray();
         //return var_dump(env('app.baseURL'));
         //var_dump($result);
+        // echo "<pre>";
+        // print_r($result);exit;
         return view('demo_view',['data'=>$result]);
     }
     public function about($id='')  
