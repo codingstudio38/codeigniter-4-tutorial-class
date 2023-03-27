@@ -7,7 +7,7 @@ use App\Models\PostModel;
 use App\Models\ProfileModel;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
- 
+  
 class XlController extends BaseController
 {
     private $profileModel =null;
