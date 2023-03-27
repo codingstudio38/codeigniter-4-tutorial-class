@@ -3,7 +3,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\PostModel;
 class PdfController extends Controller
-{
+{ 
     private $userModel =null;
 
     public function __construct()
